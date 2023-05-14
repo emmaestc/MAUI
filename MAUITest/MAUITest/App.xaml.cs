@@ -1,4 +1,7 @@
-﻿namespace MAUITest;
+﻿using MAUITest.BindingDemoTest;
+using MAUITest.MVVM.Views;
+
+namespace MAUITest;
 
 public partial class App : Application
 {
@@ -6,6 +9,14 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+        //MainPage = new NavigationPage(new ContentPageDemo());
+
+        //var navPage = new NavigationPage(new ContentPageDemo());
+        //navPage.BarBackgroundColor = Colors.Chocolate;
+        //navPage.BarTextColor = Colors.White;
+        //MainPage = navPage;
+        MainPage = new NavigationPage(new CalculatorView());
+
+
+    }
 }

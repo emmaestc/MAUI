@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MAUITest.MVVM.Views.CalculatorView"
+    Title="CalculatorView">
+    <!--<VerticalStackLayout
+        VerticalOptions="Center" 
+        HorizontalOptions="Center">
+        <Entry
+            Placeholder="Numero 1..."
+            Keyboard="Numeric"
+            Text="{Binding Number1}"/>
+        <Entry
+            Placeholder="Numero 2..."
+            Keyboard="Numeric"
+            Text="{Binding Number2}"/>
+        <Entry
+            IsEnabled="False"
+            Placeholder="Resultado..."
+            Keyboard="Numeric"
+            Text="{Binding Result}"/>
+        <Button
+            Command="{Binding AddCommand}"
+            Text="Calcular"
+            />
+    </VerticalStackLayout>-->
+    <StackLayout Padding="20">
+        <Label x:Name="Result" Text="0" HorizontalTextAlignment="End" FontSize="32"/>
+        <Grid RowDefinitions="*,*,*,*,*,*" ColumnDefinitions="*,*,*,*">
+ 
+        <Button Text="0" Grid.Row="5" Grid.Column="0" FontSize="30"/>
+        <Button Text="1" Grid.Row="4" Grid.Column="0" FontSize="30"/>
+        <Button Text="2" Grid.Row="4" Grid.Column="1" FontSize="30"/>
+        <Button Text="3" Grid.Row="4" Grid.Column="2" FontSize="30"/>
+        <Button Text="4" Grid.Row="3" Grid.Column="0" FontSize="30"/>
+        <Button Text="5" Grid.Row="3" Grid.Column="1" FontSize="30"/>
+        <Button Text="6" Grid.Row="3" Grid.Column="2" FontSize="30"/>
+        <Button Text="7" Grid.Row="2" Grid.Column="0" FontSize="30"/>
+        <Button Text="8" Grid.Row="2" Grid.Column="1" FontSize="30"/>
+        <Button Text="9" Grid.Row="2" Grid.Column="2" FontSize="30"/>
+
+        <Button Text="AC" Grid.Row="1" Grid.Column="0" FontSize="25"/>
+        <Button Text="Clear" Grid.Row="1" Grid.Column="1" FontSize="25"/>
+        <Button Text="%" Grid.Row="1" Grid.Column="2" FontSize="30"/>
+        <Button Text="/" Grid.Row="1" Grid.Column="3" FontSize="30"/>
+        <Button Text="*" Grid.Row="2" Grid.Column="3" FontSize="30"/>
+        <Button Text="-" Grid.Row="3" Grid.Column="3" FontSize="30"/>
+        <Button Text="+" Grid.Row="4" Grid.Column="3" FontSize="30"/>
+        <Button Text="=" Grid.Row="5" Grid.Column="3" FontSize="30"/>
+        <Button Text="." Grid.Row="5" Grid.Column="2" FontSize="30"/>
+
+
+    </Grid>
+    </StackLayout>
+    
+</ContentPage>

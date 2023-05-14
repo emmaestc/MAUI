@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Models="clr-namespace:MAUITest.BindingDemoTest"
+    x:Class="MAUITest.BindingDemoTest.BindingDemo"
+    Title="Binding Demo">
+
+    <ContentPage.Resources>
+        <Models:calculadora
+            x:Key="calculadora"
+            num1="100" />
+
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout
+        VerticalOptions="Center" 
+            HorizontalOptions="Center">
+        <!--<Label 
+            x:Name="lblName"
+            FontSize="50"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="{Binding num1, Source={StaticResource calculadora}}"
+             />-->
+        <Label 
+            FontSize="50"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="{Binding num1}"
+             />
+        <Label 
+            FontSize="50"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="{Binding num2}"
+             />
+        <Button
+            x:Name="btnOK"
+            Text="bindar"
+            Clicked="btnOK_Clicked"
+            />
+    </VerticalStackLayout>
+</ContentPage>
