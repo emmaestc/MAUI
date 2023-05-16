@@ -6,16 +6,51 @@
     Title="CalculatorView">
     <!--<VerticalStackLayout
         VerticalOptions="Center" 
-        HorizontalOptions="Center">
-        <Entry
+        HorizontalOptions="Center">-->
+        
+        
+        <!--<Entry
             Placeholder="Numero 1..."
             Keyboard="Numeric"
-            Text="{Binding Number1}"/>
+            Text="{Binding Number1}"/>-->
+        <!--<Label
+            Text="{Binding Result}"
+            FontSize="40"
+            />-->
+        
+        
+        
+        
+        <!--<Label
+            Text="{Binding Result}"
+            x:FieldModifier="public"
+            />
+
+        <Button
+            Text="1"
+            FontSize="40"
+            Command="{Binding CommandNumber1}"
+            />
+        <Button
+            Text="2"
+            FontSize="40"
+            Command="{Binding CommandNumber2}"
+            />
         <Entry
+            IsEnabled="False"
+            Placeholder="Total..."
+            Keyboard="Numeric"
+            Text="{Binding Total}"/>-->
+        
+        
+        
+        
+
+        <!--<Entry
             Placeholder="Numero 2..."
             Keyboard="Numeric"
-            Text="{Binding Number2}"/>
-        <Entry
+            Text="{Binding Number2}"/>-->
+        <!--<Entry
             IsEnabled="False"
             Placeholder="Resultado..."
             Keyboard="Numeric"
@@ -23,14 +58,58 @@
         <Button
             Command="{Binding AddCommand}"
             Text="Calcular"
-            />
-    </VerticalStackLayout>-->
-    <StackLayout Padding="20">
-        <Label x:Name="Result" Text="0" HorizontalTextAlignment="End" FontSize="32"/>
+            />-->
+
+
+
+
+        <!--<Grid>
+            <Grid.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}" x:Key="BtnStyle">
+                    <Setter Property="Command" Value="{Binding ClickCommand}"/>
+                    <Setter Property="CommandParameter" Value="{Binding Path=Content}"/>
+                    <Setter Property="Margin" Value="5"/>
+                </Style>
+
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Text="{Binding Result}"/>
+            <Label Text="{Binding Result}" Grid.Row="1"/>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Button  Grid.Column="0" Grid.Row="2"/>
+            </Grid>
+        </Grid>-->
+
+
+
+
+
+    <!--</VerticalStackLayout>-->
+    
+    
+    <!--<StackLayout Padding="20">
+        <Label  Text="{Binding Result}" HorizontalTextAlignment="End" FontSize="32"/>
+        <Label  Text="{Binding Expression}" HorizontalTextAlignment="End" FontSize="32"/>
         <Grid RowDefinitions="*,*,*,*,*,*" ColumnDefinitions="*,*,*,*">
  
         <Button Text="0" Grid.Row="5" Grid.Column="0" FontSize="30"/>
-        <Button Text="1" Grid.Row="4" Grid.Column="0" FontSize="30"/>
+         <Button Text="1" Grid.Row="4" Grid.Column="0" FontSize="30" Command="{Binding AddCommand1}"/>
         <Button Text="2" Grid.Row="4" Grid.Column="1" FontSize="30"/>
         <Button Text="3" Grid.Row="4" Grid.Column="2" FontSize="30"/>
         <Button Text="4" Grid.Row="3" Grid.Column="0" FontSize="30"/>
@@ -47,11 +126,165 @@
         <Button Text="*" Grid.Row="2" Grid.Column="3" FontSize="30"/>
         <Button Text="-" Grid.Row="3" Grid.Column="3" FontSize="30"/>
         <Button Text="+" Grid.Row="4" Grid.Column="3" FontSize="30"/>
-        <Button Text="=" Grid.Row="5" Grid.Column="3" FontSize="30"/>
+            <Button Text="=" Grid.Row="5" Grid.Column="3" FontSize="30" Command="{Binding AddCommand2}"/>
         <Button Text="." Grid.Row="5" Grid.Column="2" FontSize="30"/>
 
 
     </Grid>
     </StackLayout>
     
-</ContentPage>
+</ContentPage>-->
+
+    
+
+    <StackLayout Padding="20" Spacing="20">
+
+            
+            <Label Text="{Binding Display}"
+               FontSize="40"
+               HorizontalOptions="EndAndExpand"
+               VerticalOptions="Center"
+               TextColor="Black" />
+        
+        <Label Grid.Row="5"
+           Grid.Column="0"
+           Grid.ColumnSpan="3"
+           Text="{Binding Result}"
+           FontSize="40"
+           HorizontalOptions="End"
+           VerticalOptions="End" />
+
+        <Grid RowDefinitions="*,*,*,*,*,*"
+              ColumnDefinitions="*,*,*,*">
+            
+            <Button Text="0"
+                    Grid.Row="5" Grid.Column="0"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="0" />
+            
+            <Button Text="1"
+                    Grid.Row="4" Grid.Column="0"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="1" />
+
+            <Button Text="2"
+                    Grid.Row="4" Grid.Column="1"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="2" />
+
+            <Button Text="3"
+                    Grid.Row="4" Grid.Column="2"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="3" />
+
+            <Button 
+            Text="4"
+                Grid.Row="3" Grid.Column="0"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="4" />
+
+            <Button Text="5"
+                    Grid.Row="3" Grid.Column="1"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="5" />
+
+            <Button Text="6"
+                    Grid.Row="3" Grid.Column="2"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="6" />
+
+            <Button Text="7"
+                    Grid.Row="2" Grid.Column="0"
+                    FontSize="24"
+                    BackgroundColor="LightGray"
+                    Command="{Binding AppendDigitCommand}"
+                    CommandParameter="7" />
+            
+            <Button
+            Text="8"
+            Grid.Row="2" Grid.Column="1"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="8" />
+
+                
+            <Button 
+                Grid.Row="2" Grid.Column="2"
+                Text="9"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="9" />
+
+            
+
+            <Button Text="."
+                    Grid.Row="5" Grid.Column="2"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="." />
+                
+            <Button 
+                Grid.Row="1" Grid.Column="0"
+                Text="C"
+                    FontSize="24"
+                    BackgroundColor="LightGray"
+                    Command="{Binding ClearCommand}" />
+
+            <Button 
+                Grid.Row="4" Grid.Column="3"
+                Text="+"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding SetOperatorCommand}"
+            CommandParameter="+" />
+
+            <Button Text="-"
+                    Grid.Row="3" Grid.Column="3"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding SetOperatorCommand}"
+            CommandParameter="-" />
+
+            <Button Text="*"
+                    Grid.Row="2" Grid.Column="3"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding SetOperatorCommand}"
+            CommandParameter="*" />
+
+            <Button Text="/"
+                    Grid.Row="1" Grid.Column="3"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding SetOperatorCommand}"
+            CommandParameter="/" />
+
+            <Button
+            Text="="
+                Grid.Row="5" Grid.Column="3"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding EqualsCommand}" />
+
+
+        </Grid>
+        </StackLayout>
+    </ContentPage>
+   
