@@ -4,148 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MAUITest.MVVM.Views.CalculatorView"
     Title="CalculatorView">
-    <!--<VerticalStackLayout
-        VerticalOptions="Center" 
-        HorizontalOptions="Center">-->
-        
-        
-        <!--<Entry
-            Placeholder="Numero 1..."
-            Keyboard="Numeric"
-            Text="{Binding Number1}"/>-->
-        <!--<Label
-            Text="{Binding Result}"
-            FontSize="40"
-            />-->
-        
-        
-        
-        
-        <!--<Label
-            Text="{Binding Result}"
-            x:FieldModifier="public"
-            />
-
-        <Button
-            Text="1"
-            FontSize="40"
-            Command="{Binding CommandNumber1}"
-            />
-        <Button
-            Text="2"
-            FontSize="40"
-            Command="{Binding CommandNumber2}"
-            />
-        <Entry
-            IsEnabled="False"
-            Placeholder="Total..."
-            Keyboard="Numeric"
-            Text="{Binding Total}"/>-->
-        
-        
-        
-        
-
-        <!--<Entry
-            Placeholder="Numero 2..."
-            Keyboard="Numeric"
-            Text="{Binding Number2}"/>-->
-        <!--<Entry
-            IsEnabled="False"
-            Placeholder="Resultado..."
-            Keyboard="Numeric"
-            Text="{Binding Result}"/>
-        <Button
-            Command="{Binding AddCommand}"
-            Text="Calcular"
-            />-->
-
-
-
-
-        <!--<Grid>
-            <Grid.Resources>
-                <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}" x:Key="BtnStyle">
-                    <Setter Property="Command" Value="{Binding ClickCommand}"/>
-                    <Setter Property="CommandParameter" Value="{Binding Path=Content}"/>
-                    <Setter Property="Margin" Value="5"/>
-                </Style>
-
-            </Grid.Resources>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Label Text="{Binding Result}"/>
-            <Label Text="{Binding Result}" Grid.Row="1"/>
-            <Grid Grid.Row="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-                <Button  Grid.Column="0" Grid.Row="2"/>
-            </Grid>
-        </Grid>-->
-
-
-
-
-
-    <!--</VerticalStackLayout>-->
-    
-    
-    <!--<StackLayout Padding="20">
-        <Label  Text="{Binding Result}" HorizontalTextAlignment="End" FontSize="32"/>
-        <Label  Text="{Binding Expression}" HorizontalTextAlignment="End" FontSize="32"/>
-        <Grid RowDefinitions="*,*,*,*,*,*" ColumnDefinitions="*,*,*,*">
- 
-        <Button Text="0" Grid.Row="5" Grid.Column="0" FontSize="30"/>
-         <Button Text="1" Grid.Row="4" Grid.Column="0" FontSize="30" Command="{Binding AddCommand1}"/>
-        <Button Text="2" Grid.Row="4" Grid.Column="1" FontSize="30"/>
-        <Button Text="3" Grid.Row="4" Grid.Column="2" FontSize="30"/>
-        <Button Text="4" Grid.Row="3" Grid.Column="0" FontSize="30"/>
-        <Button Text="5" Grid.Row="3" Grid.Column="1" FontSize="30"/>
-        <Button Text="6" Grid.Row="3" Grid.Column="2" FontSize="30"/>
-        <Button Text="7" Grid.Row="2" Grid.Column="0" FontSize="30"/>
-        <Button Text="8" Grid.Row="2" Grid.Column="1" FontSize="30"/>
-        <Button Text="9" Grid.Row="2" Grid.Column="2" FontSize="30"/>
-
-        <Button Text="AC" Grid.Row="1" Grid.Column="0" FontSize="25"/>
-        <Button Text="Clear" Grid.Row="1" Grid.Column="1" FontSize="25"/>
-        <Button Text="%" Grid.Row="1" Grid.Column="2" FontSize="30"/>
-        <Button Text="/" Grid.Row="1" Grid.Column="3" FontSize="30"/>
-        <Button Text="*" Grid.Row="2" Grid.Column="3" FontSize="30"/>
-        <Button Text="-" Grid.Row="3" Grid.Column="3" FontSize="30"/>
-        <Button Text="+" Grid.Row="4" Grid.Column="3" FontSize="30"/>
-            <Button Text="=" Grid.Row="5" Grid.Column="3" FontSize="30" Command="{Binding AddCommand2}"/>
-        <Button Text="." Grid.Row="5" Grid.Column="2" FontSize="30"/>
-
-
-    </Grid>
-    </StackLayout>
-    
-</ContentPage>-->
-
-    
 
     <StackLayout Padding="5" Spacing="74">
 
-            
-            <Label Text="{Binding Display}"
+
+        <Label Text="{Binding Display}"
                FontSize="40"
                HorizontalOptions="EndAndExpand"
                VerticalOptions="Center"
                TextColor="Black" />
-        
+
         <Label Grid.Row="5"
            Grid.Column="0"
            Grid.ColumnSpan="3"
@@ -167,7 +35,7 @@
             IsEnabled="False"
                 Padding="80"
                 />
-            
+
             <Button 
                 Text="0"
                     Grid.Row="4" Grid.Column="0"
@@ -242,7 +110,7 @@
                     CommandParameter="7"
                     TextColor="Black"
                     BorderWidth="1"/>
-            
+
             <Button
             Text="8"
             Grid.Row="1" Grid.Column="1"
@@ -272,7 +140,7 @@
             CommandParameter="." 
                     TextColor="Black"
                     BorderWidth="1"/>
-                
+
             <Button 
                 Grid.Row="0" Grid.Column="0"
                 Text="AC"
@@ -309,7 +177,7 @@
             CommandParameter="*"
                     TextColor="#98C100"
                     BorderWidth="1"/>
-            
+
             <Button Text="/"
                     Grid.Row="0" Grid.Column="3"
             FontSize="34"
@@ -318,7 +186,7 @@
             CommandParameter="/" 
                     TextColor="#98C100"
                     BorderWidth="1"/>
-            
+
             <Button Text="%"
                     Grid.Row="0" Grid.Column="2"
             FontSize="34"
@@ -349,6 +217,6 @@
 
 
         </Grid>
-        </StackLayout>
-    </ContentPage>
+    </StackLayout>
+</ContentPage>
    

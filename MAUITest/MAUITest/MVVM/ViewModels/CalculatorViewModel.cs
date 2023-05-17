@@ -8,20 +8,6 @@ namespace MAUITest.MVVM.ViewModels
     [AddINotifyPropertyChangedInterface]
     public class CalculatorViewModel : INotifyPropertyChanged
     {
-        //public string Number1 { get; set; }
-        //public string Number2 { get; set; }
-        //public string Result { get; set; }
-
-        //public string Total { get; set; }
-
-
-        //public ICommand AddCommand => new Command(() => Result = Number1 + Number2);
-
-        //public ICommand CommandNumber1 => new Command(() => Result += "1");
-        //public ICommand CommandNumber2 => new Command(() => Result += "2");
-
-        //public ICommand CommandNumber3 => new Command(() => Result += "2");
-
         private string _display;
         private double _operand1;
         private double _operand2;
