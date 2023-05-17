@@ -275,6 +275,13 @@
             BackgroundColor="LightGray"
             Command="{Binding SetOperatorCommand}"
             CommandParameter="/" />
+            
+            <Button Text="%"
+                    Grid.Row="1" Grid.Column="2"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding SetOperatorCommand}"
+            CommandParameter="%" />
 
             <Button
             Text="="
@@ -282,6 +289,13 @@
             FontSize="24"
             BackgroundColor="LightGray"
             Command="{Binding EqualsCommand}" />
+
+            <Button 
+            Text="Delete"
+                 Grid.Row="1" Grid.Column="1"
+            FontSize="24"
+            BackgroundColor="LightGray"
+            Command="{Binding DeleteCommand}" />
 
 
         </Grid>

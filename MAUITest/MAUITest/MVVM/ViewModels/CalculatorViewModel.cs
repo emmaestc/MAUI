@@ -34,6 +34,7 @@ namespace MAUITest.MVVM.ViewModels
 
         public ICommand SetOperatorCommand { get; }
         public ICommand EqualsCommand { get; }
+        public ICommand DeleteCommand { get; }
 
         public string Display
         {
@@ -121,6 +122,7 @@ namespace MAUITest.MVVM.ViewModels
             ClearCommand = new Command(Clear);
             SetOperatorCommand = new Command<string>(SetOperator);
             EqualsCommand = new Command(PerformOperation);
+            DeleteCommand = new Command(DeleteLastDigit);
         }
 
         public void AppendDigit(string digit)
@@ -150,17 +152,6 @@ namespace MAUITest.MVVM.ViewModels
                         Display += digit;
                     }
                 }
-                //else
-                //{
-                //    if (Display == "0")
-                //    {
-                //        Display = digit;
-                //    }
-                //    else
-                //    {
-                //        Display += digit;
-                //    }
-                //}
             }
         }
 
@@ -168,10 +159,6 @@ namespace MAUITest.MVVM.ViewModels
         {
             CurrentOperator = op;
 
-            //if (!string.IsNullOrEmpty(CurrentOperator) && Operand1 != 0 && Operand2 != 0)
-            //{
-            //    Calculate();
-            //}
             if (!string.IsNullOrEmpty(CurrentOperator) && Operand2 != 0)
             {
                 Calculate();
@@ -199,18 +186,25 @@ namespace MAUITest.MVVM.ViewModels
                 case "/":
                     result = Operand1 / Operand2;
                     break;
+                case "%":
+                    result = Operand1 % Operand2;
+                    break;
             }
 
+            string operation = $"{Operand1} {CurrentOperator} {Operand2} = {result}";
+            //Result += operation + Environment.NewLine;
+            Result = operation;
             Operand1 = result;
             Operand2 = 0;
             Display = result.ToString();
-            Result = result.ToString();
+            
             HasPerformedOperation = true;
         }
 
         public void Clear()
         {
             Display = "0";
+            Result = "0";
             Operand1 = 0;
             Operand2 = 0;
             CurrentOperator = null;
@@ -220,15 +214,31 @@ namespace MAUITest.MVVM.ViewModels
         {
             if (HasPerformedOperation)
             {
-                //Operand1 = double.Parse(Display);
-                //Operand2 = 0;
-                //HasPerformedOperation = false;
-
                 Operand2 = double.Parse(Display);
                 HasPerformedOperation = false;
             }
 
             Calculate();
+        }
+
+        public void DeleteLastDigit()
+        {
+            if (Display.Length > 1)
+            {
+                Display = Display.Substring(0, Display.Length - 1);
+            }
+            else
+            {
+                Display = "0";
+            }
+            if (Operand1 != 0)
+            {
+                Operand1 = double.Parse(Display);
+            }
+            if (Operand2 != 0)
+            {
+                Operand2 = double.Parse(Display);
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
