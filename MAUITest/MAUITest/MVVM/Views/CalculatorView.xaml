@@ -137,7 +137,7 @@
 
     
 
-    <StackLayout Padding="20" Spacing="20">
+    <StackLayout Padding="5" Spacing="74">
 
             
             <Label Text="{Binding Display}"
@@ -154,148 +154,198 @@
            HorizontalOptions="End"
            VerticalOptions="End" />
 
-        <Grid RowDefinitions="*,*,*,*,*,*"
-              ColumnDefinitions="*,*,*,*">
-            
-            <Button Text="0"
-                    Grid.Row="5" Grid.Column="0"
+        <Grid RowDefinitions="*,*,*,*,*"
+              ColumnDefinitions="*,*,*,*"
+              BackgroundColor="#12E2FF"
+              Padding="5">
+
+            <Button 
+            Text="0"
+                 Grid.Row="5" Grid.Column="1"
             FontSize="24"
-            BackgroundColor="LightGray"
-            Command="{Binding AppendDigitCommand}"
-            CommandParameter="0" />
+                BackgroundColor="White"
+            IsEnabled="False"
+                Padding="80"
+                />
             
-            <Button Text="1"
+            <Button 
+                Text="0"
                     Grid.Row="4" Grid.Column="0"
-            FontSize="24"
-            BackgroundColor="LightGray"
+            FontSize="30"   
+            BackgroundColor="#74FDFF"
             Command="{Binding AppendDigitCommand}"
-            CommandParameter="1" />
+            CommandParameter="0"
+                TextColor="Black"
+                BorderWidth="1"
+                Margin="0,0,-93,0" />
+
+            <Button Text="1"
+                    Grid.Row="3" Grid.Column="0"
+            FontSize="30"
+            BackgroundColor="#74FDFF"
+            Command="{Binding AppendDigitCommand}"
+            CommandParameter="1" 
+                    TextColor="Black"
+                    BorderWidth="1"/>
 
             <Button Text="2"
-                    Grid.Row="4" Grid.Column="1"
-            FontSize="24"
-            BackgroundColor="LightGray"
+                    Grid.Row="3" Grid.Column="1"
+            FontSize="30"
+            BackgroundColor="#74FDFF"
             Command="{Binding AppendDigitCommand}"
-            CommandParameter="2" />
+            CommandParameter="2"
+                    TextColor="Black"
+                    BorderWidth="1"/>
 
             <Button Text="3"
-                    Grid.Row="4" Grid.Column="2"
-            FontSize="24"
-            BackgroundColor="LightGray"
+                    Grid.Row="3" Grid.Column="2"
+            FontSize="30"
+            BackgroundColor="#74FDFF"
             Command="{Binding AppendDigitCommand}"
-            CommandParameter="3" />
+            CommandParameter="3" 
+                    TextColor="Black"
+                    BorderWidth="1"/>
 
             <Button 
             Text="4"
-                Grid.Row="3" Grid.Column="0"
-            FontSize="24"
-            BackgroundColor="LightGray"
+                Grid.Row="2" Grid.Column="0"
+            FontSize="30"
+            BackgroundColor="#74FDFF"
             Command="{Binding AppendDigitCommand}"
-            CommandParameter="4" />
+            CommandParameter="4"
+                TextColor="Black"
+                BorderWidth="1"/>
 
             <Button Text="5"
-                    Grid.Row="3" Grid.Column="1"
-            FontSize="24"
-            BackgroundColor="LightGray"
+                    Grid.Row="2" Grid.Column="1"
+            FontSize="30"
+            BackgroundColor="#74FDFF"
             Command="{Binding AppendDigitCommand}"
-            CommandParameter="5" />
+            CommandParameter="5" 
+                    TextColor="Black"
+                    BorderWidth="1"/>
 
             <Button Text="6"
-                    Grid.Row="3" Grid.Column="2"
-            FontSize="24"
-            BackgroundColor="LightGray"
+                    Grid.Row="2" Grid.Column="2"
+            FontSize="30"
+            BackgroundColor="#74FDFF"
             Command="{Binding AppendDigitCommand}"
-            CommandParameter="6" />
+            CommandParameter="6" 
+                    TextColor="Black"
+                    BorderWidth="1"/>
 
             <Button Text="7"
-                    Grid.Row="2" Grid.Column="0"
-                    FontSize="24"
-                    BackgroundColor="LightGray"
+                    Grid.Row="1" Grid.Column="0"
+                    FontSize="30"
+                    BackgroundColor="#74FDFF"
                     Command="{Binding AppendDigitCommand}"
-                    CommandParameter="7" />
+                    CommandParameter="7"
+                    TextColor="Black"
+                    BorderWidth="1"/>
             
             <Button
             Text="8"
-            Grid.Row="2" Grid.Column="1"
-            FontSize="24"
-            BackgroundColor="LightGray"
+            Grid.Row="1" Grid.Column="1"
+            FontSize="30"
+            BackgroundColor="#74FDFF"
             Command="{Binding AppendDigitCommand}"
-            CommandParameter="8" />
+            CommandParameter="8" 
+                TextColor="Black"
+                BorderWidth="1"/>
 
-                
+
             <Button 
-                Grid.Row="2" Grid.Column="2"
+                Grid.Row="1" Grid.Column="2"
                 Text="9"
-            FontSize="24"
-            BackgroundColor="LightGray"
+            FontSize="30"
+            BackgroundColor="#74FDFF"
             Command="{Binding AppendDigitCommand}"
-            CommandParameter="9" />
-
-            
+            CommandParameter="9"
+                TextColor="Black"
+                BorderWidth="1"/>
 
             <Button Text="."
-                    Grid.Row="5" Grid.Column="2"
-            FontSize="24"
-            BackgroundColor="LightGray"
+                    Grid.Row="4" Grid.Column="2"
+            FontSize="30"
+            BackgroundColor="#74FDFF"
             Command="{Binding AppendDigitCommand}"
-            CommandParameter="." />
+            CommandParameter="." 
+                    TextColor="Black"
+                    BorderWidth="1"/>
                 
             <Button 
-                Grid.Row="1" Grid.Column="0"
-                Text="C"
-                    FontSize="24"
-                    BackgroundColor="LightGray"
-                    Command="{Binding ClearCommand}" />
+                Grid.Row="0" Grid.Column="0"
+                Text="AC"
+                    FontSize="30"
+                    BackgroundColor="#2EF2FF"
+                    Command="{Binding ClearCommand}" 
+                TextColor="#98C100"
+                BorderWidth="1"/>
 
             <Button 
-                Grid.Row="4" Grid.Column="3"
+                Grid.Row="3" Grid.Column="3"
                 Text="+"
-            FontSize="24"
-            BackgroundColor="LightGray"
+            FontSize="34"
+            BackgroundColor="#2EF2FF"
             Command="{Binding SetOperatorCommand}"
-            CommandParameter="+" />
+            CommandParameter="+" 
+                TextColor="#98C100"
+                BorderWidth="1"/>
 
             <Button Text="-"
-                    Grid.Row="3" Grid.Column="3"
-            FontSize="24"
-            BackgroundColor="LightGray"
+                    Grid.Row="2" Grid.Column="3"
+            FontSize="34"
+            BackgroundColor="#2EF2FF"
             Command="{Binding SetOperatorCommand}"
-            CommandParameter="-" />
+            CommandParameter="-"
+                    TextColor="#98C100"
+                    BorderWidth="1"/>
 
             <Button Text="*"
-                    Grid.Row="2" Grid.Column="3"
-            FontSize="24"
-            BackgroundColor="LightGray"
-            Command="{Binding SetOperatorCommand}"
-            CommandParameter="*" />
-
-            <Button Text="/"
                     Grid.Row="1" Grid.Column="3"
-            FontSize="24"
-            BackgroundColor="LightGray"
+            FontSize="34"
+            BackgroundColor="#2EF2FF"
             Command="{Binding SetOperatorCommand}"
-            CommandParameter="/" />
+            CommandParameter="*"
+                    TextColor="#98C100"
+                    BorderWidth="1"/>
+            
+            <Button Text="/"
+                    Grid.Row="0" Grid.Column="3"
+            FontSize="34"
+            BackgroundColor="#2EF2FF"
+            Command="{Binding SetOperatorCommand}"
+            CommandParameter="/" 
+                    TextColor="#98C100"
+                    BorderWidth="1"/>
             
             <Button Text="%"
-                    Grid.Row="1" Grid.Column="2"
-            FontSize="24"
-            BackgroundColor="LightGray"
+                    Grid.Row="0" Grid.Column="2"
+            FontSize="34"
+            BackgroundColor="#2EF2FF"
             Command="{Binding SetOperatorCommand}"
-            CommandParameter="%" />
+            CommandParameter="%" 
+                    TextColor="#98C100"
+                    BorderWidth="1"/>
 
             <Button
             Text="="
-                Grid.Row="5" Grid.Column="3"
-            FontSize="24"
-            BackgroundColor="LightGray"
-            Command="{Binding EqualsCommand}" />
+                Grid.Row="4" Grid.Column="3"
+            FontSize="35"
+            BackgroundColor="#2EF2FF"
+            Command="{Binding EqualsCommand}" 
+                BorderWidth="1"
+                TextColor="Black"/>
 
             <Button 
             Text="Delete"
-                 Grid.Row="1" Grid.Column="1"
+                 Grid.Row="0" Grid.Column="1"
             FontSize="24"
-            BackgroundColor="LightGray"
-            Command="{Binding DeleteCommand}" />
+            BackgroundColor="#2EF2FF"
+            Command="{Binding DeleteCommand}" 
+                TextColor="#98C100"
+                BorderWidth="1"/>
+
 
 
         </Grid>
